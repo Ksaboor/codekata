@@ -37,4 +37,18 @@ public class Fibonacci {
         }
         return f1;
     }
+
+    /**
+     * Time Complexity: T(n) = T(n-1) + T(n-2) which is exponential.
+     * We can observe that this implementation does a lot of repeated work.
+     * So this is a bad implementation for nth Fibonacci number.
+     * @param n
+     * @return
+     */
+
+    public static int RecursionFibonacci(int n){
+        if (n <= 1)
+            return n;
+        return RecursionFibonacci(n-1) + RecursionFibonacci(n-2);
+    }
 }
